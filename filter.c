@@ -1,0 +1,66 @@
+#include "filter.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "bitarray.h"
+#include <time.h>
+#include <string.h>
+#include <math.h>
+
+
+filter *create_filter(int m, int k){
+    int i;
+    filter *f = malloc(sizeof(filter));
+    f->m = m;
+    f->array = create_bitearray(m);
+    f->k = k;
+    f->hash = calloc(k,int);
+    for(i = 0; i<k; i++){
+        f->hash[i] = (rand()%(255 - 2 + 1)) + 2;
+    }
+}
+
+void free_filter(filter *f){
+    free_bitarray(f->array);
+    free(f->hash);
+    free(f);
+}
+
+
+
+void hash(filter *f, char *str, unsigned hashes[]){
+    int i, j, tmp, len;
+    len = strlen(str);
+    for(i = 0; i<f->k; i++){
+        tmp = 0;
+        for(j = 0; j < len; j++){
+            tmp += str[j] + pow(f->hash[i], len-(j+1));
+            tmp = tmp%m;
+        }
+        hashes[tmp] = 1;
+    }
+}
+
+void add_filter(filter *f, char *str){
+    int i, j, tmp, len;
+    len = strlen(str);
+    for(i = 0; i<f->k; i++){
+        tmp = 0;
+        for(j = 0; j < len; j++){
+            tmp += str[j] + pow(f->hash[i], len-(j+1));
+            tmp = tmp%m;
+        }
+        set_bitarray(f->array, tmp)
+    }
+}
+
+int is_member_filter(filter *f, char *str){
+    int i;
+    unsigned hashes[f->m];
+    hash(f,str,hashes);
+    for(i = 0; i<f->m; i++){
+        if(hashes[i] != get_bitarray(f->array,i)){
+            return 0;
+        }
+    }
+    return 1;
+}
