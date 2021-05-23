@@ -3,4 +3,4 @@ project(BloomProject C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(BloomProject main.c)
+add_executable(BloomProject test.c)

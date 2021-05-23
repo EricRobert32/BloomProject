@@ -1,12 +1,11 @@
 typedef struct _bitarray{
-
+    unsigned char *array;
+    int size;
 } bitarray;
 
 bitarray *create_bitearray(int m);
 
 void free_bitarray(bitarray *a);
-
-void set_bitarray(bitarray *a);
 
 void set_bitarray(bitarray *a, int pos);
 

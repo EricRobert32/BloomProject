@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/BloomProject.dir/test.c.o  -o BloomProject 
