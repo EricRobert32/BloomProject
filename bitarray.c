@@ -1,20 +1,17 @@
 #include "bitarray.h"
-#include "stdio.h"
 #include "stdlib.h"
 
 
-create_bitearray(int m) {
-    bitarray b = (bitarray *) malloc(sizeof(bitarray));
-    b.array = (unsigned char *) calloc(m, sizeof(unsigned char));
-    b.size = m;
+bitarray *create_bitarray(int m) {
+    bitarray *b = (bitarray *) malloc(sizeof(bitarray));
+    b->array = (unsigned char *) calloc(m, sizeof(unsigned char));
+    b->size = m;
     return b;
 }
 
-free_bitarray(bitarray
-*a){
-free(a
-->array);
-free(a)
+void free_bitarray(bitarray *a){
+    free(a->array);
+    free(a);
 }
 
 void set_bitarray(bitarray *a, int pos) {
@@ -31,8 +28,8 @@ int get_bitarray(bitarray *a, int pos) {
 }
 
 void clear_bitarray(bitarray *a) {
-    int i = 0;
-    for (i; i < a->size; ++i) {
+    int i;
+    for (i = 0; i < a->size; ++i) {
         a->array[i] = 0;
     }
 }

@@ -45,7 +45,7 @@ CMAKE_CODEBLOCKS_MAKE_ARGUMENTS:STRING=-j8
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
