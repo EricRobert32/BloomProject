@@ -4,12 +4,17 @@
 #include "bitarray.h"
 
 typedef struct  _filter {
-    int m;
     bitarray *array;
     int k;
     int *hash;
 } filter;
 
+/**
+ * Create filter with a bit array  of size m and k hash value in hash
+ * @param m
+ * @param k
+ * @return
+ */
 filter *create_filter(int m, int k);
 
 void free_filter(filter *f);

@@ -123,7 +123,7 @@ int verify_set_bitarray() {
         free_bitarray(ba);
     }
     if (res == 0) printf("\n");
-    return res;  
+    return res;
 }
 
 int verify_reset_bitarray() {
@@ -152,7 +152,7 @@ int verify_reset_bitarray() {
         free_bitarray(ba);
     }
     if (res == 0) printf("\n");
-    return res;  
+    return res;
 }
 
 int verify_clear_bitarray() {
@@ -178,16 +178,16 @@ int verify_clear_bitarray() {
         free_bitarray(ba);
     }
     if (res == 0) printf("\n");
-    return res;  
+    return res;
 }
 
 int _is_empty_filter(filter *f) {
     char a[4]; a[3] = '\0';
     for (a[0] = 1; a[0] < 127; a[0]++)
-    for (a[1] = 1; a[1] < 127; a[1]++)
-    for (a[2] = 1; a[2] < 127; a[2]++)
-        if (is_member_filter(f, a) == 1)
-            return 0;
+        for (a[1] = 1; a[1] < 127; a[1]++)
+            for (a[2] = 1; a[2] < 127; a[2]++)
+                if (is_member_filter(f, a) == 1)
+                    return 0;
     return 1;
 }
 
@@ -216,11 +216,11 @@ int verify_create_filter() {
 
 int verify_add_filter() {
     int nwords = 20;
-    char *wordlist[] = 
-        {"baby", "back", "bad", "bag", "ball", 
-        "bank", "bar", "base", "be", "beat",
-        "camera", "campaign", "can", "candidate", "capital", 
-        "car", "card", "care", "career", "carry"};
+    char *wordlist[] =
+            {"baby", "back", "bad", "bag", "ball",
+             "bank", "bar", "base", "be", "beat",
+             "camera", "campaign", "can", "candidate", "capital",
+             "car", "card", "care", "career", "carry"};
     int res = 1;
     int size;
     for (size = 0; size < _nfsizes; size++) {
@@ -233,7 +233,7 @@ int verify_add_filter() {
         for (j = 0; j < nwords; j++) {
             if (is_member_filter(f, wordlist[j]) == 0) {
                 if (res == 1) printf("\033[1madd_filter FAILED\033[0m failed for (size, k, missing word): ");
-                    printf("(%d, %d, %s) ", _fsizes[size], k, wordlist[j]);
+                printf("(%d, %d, %s) ", _fsizes[size], k, wordlist[j]);
                 res = 0;
             }
         }
@@ -289,7 +289,7 @@ int main() {
     res = verify_create_filter();
     display_end("create_filter", res);
     score += 1-res;
- 
+
     display_begin("add_filter");
     res = verify_add_filter();
     display_end("add_filter", res);

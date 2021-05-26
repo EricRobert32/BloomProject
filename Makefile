@@ -10,6 +10,9 @@ OBJ=bitarray.o filter.o
 test: test.o $(OBJ)
 	gcc -o $@ $^ $(LDFLAGS)
 
+main: main.o $(OBJ)
+	gcc -o $@ $^ $(LDFLAGS)
+
 .PHONY: clean
 clean:
-	rm -f $(OBJ) test test.o
+	rm -f $(OBJ) test test.o main.o

@@ -9,7 +9,7 @@ bitarray *create_bitarray(int m) {
     return b;
 }
 
-void free_bitarray(bitarray *a){
+void free_bitarray(bitarray *a) {
     free(a->array);
     free(a);
 }
