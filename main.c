@@ -23,16 +23,18 @@ int main(int argc, char* argv[]){
     fclose(file);
 
     FILE* file2 = fopen(argv[4], "r");
-    tmp[50] = "";
+    char tmp2[50] = "";
+    long test = 0;
     int number_of_falstrue = 0;
-    while(fgets(tmp, 50, file2) != NULL){
-        if(is_member_filter(f,tmp) == 1 && hashWord(h,tmp) == 0){
+    while(fgets(tmp2, 50, file2) != NULL){
+        test++;
+        if(is_member_filter(f,tmp2) == 1 && hashWord(h,tmp2) == 0){
             number_of_falstrue++;
         }
     }
     fclose(file2);
     freeHashTable(h);
     free_filter(f);
-    printf("Pour une valeur de m : %d et un valeur de k : %d il y a %d faux bon réponse",m,k,number_of_falstrue);
+    printf("Pour une valeur de m : %d et un valeur de k : %d il y a %f faux postif\n",m,k,(float)number_of_falstrue/(float)test);
     return 0;
 }

@@ -12,15 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9629f526-2f83-44c1-a8a5-92c237557d64" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sort.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sort2.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitarray.o" beforeDir="false" afterPath="$PROJECT_DIR$/bitarray.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter.o" beforeDir="false" afterPath="$PROJECT_DIR$/filter.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" afterPath="$PROJECT_DIR$/test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.o" beforeDir="false" afterPath="$PROJECT_DIR$/test.o" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +64,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="D:\Bureau\Cour\Algorithme\Projet\BloomProject" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="MAIN_BLOOM" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BloomProject" TARGET_NAME="MAIN_BLOOM" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BloomProject" RUN_TARGET_NAME="MAIN_BLOOM">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -94,6 +99,9 @@
       <workItem from="1623487474276" duration="443000" />
       <workItem from="1623487973850" duration="2010000" />
       <workItem from="1623500000219" duration="1317000" />
+      <workItem from="1623507441689" duration="66000" />
+      <workItem from="1623529478414" duration="3730000" />
+      <workItem from="1623612269763" duration="2922000" />
     </task>
     <servers />
   </component>
